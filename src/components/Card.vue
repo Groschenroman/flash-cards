@@ -1,5 +1,7 @@
 <template>
-  <article class="flex flex-col justify-between p-4 bg-yellow-200">
+  <article
+    class="flex flex-col justify-between p-4 bg-yellow-200 rounded-sm shadow-md card"
+  >
     <header>Card</header>
     <main>{{ msg }}</main>
     <footer>footer</footer>
@@ -20,4 +22,9 @@ export default class Card extends Vue {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped></style>
+<style scoped>
+.card {
+  width: 50vmin;
+  height: 50vmin;
+}
+</style>
