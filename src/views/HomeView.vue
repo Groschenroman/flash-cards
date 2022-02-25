@@ -1,7 +1,9 @@
 <template>
   <div class="flex justify-center">
     <!-- <img alt="Vue logo" src="../assets/logo.png" /> -->
-    <Card msg="Welcome to Your Vue.js + TypeScript App" />
+    <template v-for="card in cards" :key="card">
+      <Card :card="card" />
+    </template>
   </div>
 </template>
 
@@ -14,5 +16,17 @@ import Card from "@/components/Card.vue"; // @ is an alias to /src
     Card,
   },
 })
-export default class HomeView extends Vue {}
+export default class HomeView extends Vue {
+  public readonly cards = [
+    {
+      id: 1,
+      question: `What is
+        the difference
+        between 1 and 2
+      `,
+      answer: `foo`,
+      reissue: 0,
+    },
+  ];
+}
 </script>

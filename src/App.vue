@@ -1,6 +1,6 @@
 <template>
   <div id="site">
-    <header class="bg-slate-200 flex justify-center items-center">
+    <header class="bg-slate-400 flex justify-center items-center">
       <nav class="w-full max-w-screen-xl">
         <ul class="w-full flex justify-center items-center">
           <li class="px-4">
@@ -12,11 +12,11 @@
         </ul>
       </nav>
     </header>
-    <main class="bg-slate-300 flex items-center justify-center p-4">
+    <main class="bg-slate-600 flex items-center justify-center p-4">
       <router-view />
     </main>
     <footer
-      class="bg-slate-400 text-slate-200 flex justify-center items-center"
+      class="bg-slate-800 text-slate-200 flex justify-center items-center"
     >
       Footer
     </footer>

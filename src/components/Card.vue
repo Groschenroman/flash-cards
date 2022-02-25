@@ -1,9 +1,12 @@
 <template>
   <article
-    class="flex flex-col justify-between p-4 bg-yellow-200 rounded-sm shadow-md card"
+    class="flex flex-col justify-between p-4 bg-yellow-200 rounded-sm shadow-md w-[50vmin] h-[50vmin]"
   >
-    <header>Card</header>
-    <main>{{ msg }}</main>
+    <header>Card {{ card.id }}</header>
+    <main>
+      {{ card?.question }}<br />
+      {{ card?.answer }}
+    </main>
     <footer>footer</footer>
   </article>
 </template>
@@ -13,18 +16,10 @@ import { Options, Vue } from "vue-class-component";
 
 @Options({
   props: {
-    msg: String,
+    card: Object,
   },
 })
 export default class Card extends Vue {
-  msg!: string;
+  card!: any;
 }
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-.card {
-  width: 50vmin;
-  height: 50vmin;
-}
-</style>
