@@ -1,5 +1,5 @@
 <template>
-  <article class="bg-yellow-200">
+  <article class="flex flex-col justify-between p-4 bg-yellow-200">
     <header>Card</header>
     <main>{{ msg }}</main>
     <footer>footer</footer>
@@ -14,7 +14,7 @@ import { Options, Vue } from "vue-class-component";
     msg: String,
   },
 })
-export default class HelloWorld extends Vue {
+export default class Card extends Vue {
   msg!: string;
 }
 </script>
